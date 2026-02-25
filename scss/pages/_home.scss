@@ -1,0 +1,26 @@
+@use "../abstract" as *;
+.homeBanner {
+  padding: 4rem 0;
+  background-color: $clr--tiertery;
+  &__wrapper {
+    @include gridCustom(1fr 1fr, 4rem);
+  }
+  &__details {
+    padding-top: 5rem;
+    small {
+      letter-spacing: 1.5rem;
+      margin-bottom: 5rem;
+    }
+    h2 {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  }
+  &__img {
+    
+  }
+}
