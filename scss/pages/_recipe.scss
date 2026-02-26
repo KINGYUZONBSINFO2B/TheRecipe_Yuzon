@@ -1,0 +1,67 @@
+@use "../abstract" as *;
+
+.recipe {
+    height: 45rem;
+  position: relative;
+  background-color: $clr--tiertery;
+  &__title {
+    @include between;
+    align-items: end;
+    h2 {
+      width: 40rem;
+      line-height: 1.5;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    p {
+      padding-bottom: 1.5rem;
+    }
+  }
+  &__level {
+    @include between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h5:last-child {
+      padding-right: 3rem;
+    }
+  }
+  &__wrapper {
+    padding-top: 2rem;
+    @include between;
+    gap: 1rem;
+    left: 25%;
+    width: 90rem;
+
+    position: absolute;
+  }
+  &__ingredient {
+    height: 734px;
+    padding: 5rem;
+    background-color: $clr--primary;
+    color: $clr--light;
+  }
+}
+.direction{
+    margin-top: 20rem;
+    padding: 4rem;
+    &__wrapper{
+        @include gridCustom(1.4fr 1fr, 2rem);
+    }
+    &__title {
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      color: $clr--primary;
+      &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid $clr--primary;
+      }
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

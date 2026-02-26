@@ -1401,7 +1401,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.header__logo h3 {
+.header__logo h3 > a {
   color: #666666;
 }
 .header__nav ul {
@@ -1411,6 +1411,26 @@ img {
 }
 .header__nav ul li a {
   color: #666666;
+}
+
+.footer {
+  padding: 2rem 0;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer {
+  background-color: #f8dab9;
+}
+.footer a {
+  color: #666666;
+  margin-right: 1rem;
+}
+.footer a:last-child {
+  margin-right: unset;
 }
 
 .tns-outer {
@@ -1478,8 +1498,8 @@ img {
   color: #dedbdb;
 }
 .btn.btn--primary:hover {
-  background-color: #dedbdb;
-  color: #666666;
+  background-color: #666666;
+  color: #d9964a;
   border: 1px solid #dedbdb;
   transition: 0.5s ease;
 }
@@ -1523,6 +1543,7 @@ img {
 }
 
 .homeBanner {
+  position: relative;
   padding: 4rem 0;
   background-color: #f8dab9;
 }
@@ -1545,4 +1566,410 @@ img {
 .homeBanner__details p {
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+.homeBanner__img img {
+  position: relative;
+  left: 10rem;
+}
+
+.weekly {
+  padding: 4rem 0;
+}
+.weekly__title {
+  padding-bottom: 3rem;
+}
+.weekly__title .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #d9964a;
+}
+.weekly__title .divider::before, .weekly__title .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d9964a;
+}
+.weekly__title .divider::before {
+  margin-right: 1rem;
+}
+.weekly__title .divider::after {
+  margin-left: 1rem;
+}
+.weekly__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.weekly__img img {
+  width: 340px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.weekly__details {
+  padding-top: 1rem;
+}
+.weekly__details small {
+  letter-spacing: 1rem;
+}
+.weekly__details h4 {
+  padding-top: 1rem;
+}
+.weekly__details p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.collection {
+  padding: 4rem 0;
+}
+.collection__title .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: #d9964a;
+}
+.collection__title .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d9964a;
+}
+.collection__title .divider::after {
+  margin-left: 1rem;
+}
+.collection__section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.collection img {
+  width: 1700px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.collection__section:nth-child(even) {
+  flex-direction: row-reverse;
+  gap: 5rem;
+}
+.collection__details {
+  padding-top: 3rem;
+}
+.collection__details small {
+  letter-spacing: 1rem;
+}
+.collection__details h2 {
+  margin-bottom: 1rem;
+}
+.collection__details p {
+  margin-bottom: 1rem;
+}
+
+.newsLetter {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3)), url("../../img/bell_pepper.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 10rem;
+  text-align: center;
+}
+.newsLetter__wrapper h2 {
+  color: #dedbdb;
+}
+.newsLetter__wrapper p {
+  color: #dedbdb;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.newsLetter__wrapper form {
+  display: flex;
+  justify-content: center;
+}
+.newsLetter__wrapper input[type=text] {
+  height: 3.1rem;
+  width: 30rem;
+  padding: 0 1rem;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  outline: none;
+}
+.newsLetter__wrapper form a {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.classic {
+  padding: 4rem 0;
+}
+.classic__title .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: #d9964a;
+}
+.classic__title .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d9964a;
+}
+.classic__title .divider::after {
+  margin-left: 1rem;
+}
+.classic i {
+  color: #d9964a;
+}
+.classic small {
+  letter-spacing: 0.75rem;
+  color: #d9964a;
+}
+.classic h4 {
+  color: #666666;
+}
+.classic__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.classic__dish {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 200rem;
+}
+.classic__dish img {
+  width: 10rem;
+  height: 12rem;
+}
+.classic__img {
+  width: 10rem;
+}
+.classic__details {
+  max-width: 100rem;
+  width: 15rem;
+}
+
+.about {
+  background-color: #f8dab9;
+  position: relative;
+  padding-bottom: 33rem;
+}
+.about__title h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+.about__img {
+  position: absolute;
+  left: 20%;
+}
+.about__img img {
+  width: 90rem;
+  height: 50rem;
+}
+
+.aboutRecipe {
+  padding: 4rem 0;
+  margin-top: 18rem;
+}
+.aboutRecipe__wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 4rem;
+}
+.aboutRecipe__details h2 {
+  margin-bottom: 1rem;
+}
+.aboutRecipe__details p {
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+.aboutRecipe__details i {
+  color: #d9964a;
+  margin-bottom: 1rem;
+}
+.aboutRecipe__details small {
+  letter-spacing: 1rem;
+  color: #d9964a;
+}
+.aboutRecipe__dish {
+  width: 20rem;
+}
+.aboutRecipe .look {
+  color: #d9964a;
+}
+.aboutRecipe__else {
+  width: 21rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.aboutRecipe__else img {
+  max-width: 8rem;
+  height: 10rem;
+}
+
+.contact {
+  background-color: #f8dab9;
+  position: relative;
+  padding-bottom: 33rem;
+  margin-bottom: 20rem;
+}
+.contact__title h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+.contact__img {
+  position: absolute;
+  left: 20%;
+}
+.contact__img img {
+  width: 90rem;
+  height: 50rem;
+}
+
+.contactForm {
+  padding: 4rem 0;
+}
+.contactForm__wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+.contactForm__details h2 {
+  margin-bottom: 2rem;
+}
+.contactForm__details p {
+  margin-bottom: 2rem;
+}
+.contactForm__details form label,
+.contactForm__details form input {
+  display: block;
+}
+.contactForm__details form input {
+  border: 1px solid black;
+  width: 64rem;
+  height: 4rem;
+  font-size: 24px;
+}
+.contactForm__details form textarea {
+  border: 1px solid black;
+  width: 64rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+.contactForm__info {
+  margin-top: 8rem;
+  padding: 4rem;
+  height: 33rem;
+  align-items: center;
+  border: 1px solid #d9964a;
+  background-color: #d9964a;
+}
+.contactForm__info h3,
+.contactForm__info h4,
+.contactForm__info p {
+  color: #dedbdb;
+}
+.contactForm__info h3 {
+  padding-bottom: 1rem;
+}
+.contactForm__info h4 {
+  padding-bottom: 1rem;
+}
+.contactForm__info i {
+  color: #dedbdb;
+  margin-right: 1rem;
+  font-size: 1.75rem;
+  padding-bottom: 0.5rem;
+}
+.contactForm__socials {
+  display: flex;
+}
+
+.recipe {
+  height: 45rem;
+  position: relative;
+  background-color: #f8dab9;
+}
+.recipe__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: end;
+}
+.recipe__title h2 {
+  width: 40rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.recipe__title p {
+  padding-bottom: 1.5rem;
+}
+.recipe__level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.recipe__level h5:last-child {
+  padding-right: 3rem;
+}
+.recipe__wrapper {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  left: 25%;
+  width: 90rem;
+  position: absolute;
+}
+.recipe__ingredient {
+  height: 734px;
+  padding: 5rem;
+  background-color: #d9964a;
+  color: #dedbdb;
+}
+
+.direction {
+  margin-top: 20rem;
+  padding: 4rem;
+}
+.direction__wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+}
+.direction__title .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: #d9964a;
+}
+.direction__title .divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d9964a;
+}
+.direction__title .divider::after {
+  margin-left: 1rem;
 }/*# sourceMappingURL=main.min.css.map */

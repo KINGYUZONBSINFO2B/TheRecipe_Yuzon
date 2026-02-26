@@ -8,7 +8,7 @@
         @include between();
     }
     &__logo {
-      h3 {
+      h3>a {
       color: $clr--dark;
     }
   }

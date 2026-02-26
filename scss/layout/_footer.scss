@@ -1,0 +1,17 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+.footer {
+    padding: 2rem 0;
+  &__wrapper {
+    @include centerAll();
+  }
+  background-color: $clr--tiertery;
+  a{
+    color: $clr--dark;
+    margin-right: 1rem;
+    &:last-child{
+        margin-right: unset;
+    }
+  }
+ 
+}

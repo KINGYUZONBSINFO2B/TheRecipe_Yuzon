@@ -1,0 +1,68 @@
+@use "../abstract" as *;
+
+.about {
+  background-color: $clr--tiertery;
+  position: relative;
+  padding-bottom: 33rem;
+
+  &__title h3 {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+  }
+  &__img {
+    position: absolute;
+    left: 20%;
+
+    img {
+      width: 90rem;
+      height: 50rem;
+    }
+  }
+}
+.aboutRecipe {
+  padding: 4rem 0;
+  margin-top: 18rem;
+
+  &__wrapper {
+    @include gridCustom(3fr 1fr, 4rem);
+  }
+  &__details {
+    h2{
+        margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      text-align: justify;
+      
+    }
+    i {
+      color: $clr--primary;
+      margin-bottom: 1rem;
+    }
+    small {
+      letter-spacing: 1rem;
+      color: $clr--primary;
+    }
+     
+  }
+  
+
+  &__dish {
+    width: 20rem;
+  }
+  .look     {
+    color: $clr--primary;
+  }
+  &__else {
+    width: 21rem;
+    padding-top: 1rem;
+    @include gridCustom(1fr 1fr, 1rem);
+     
+    img {
+      max-width: 8rem;
+      height: 10rem;
+    }
+  }
+}
