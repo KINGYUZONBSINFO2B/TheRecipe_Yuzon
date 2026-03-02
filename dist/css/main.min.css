@@ -1507,6 +1507,7 @@ img {
   background-color: #666666;
   color: #dedbdb;
   border: 1px solid #dedbdb;
+  border-radius: 5rem;
 }
 .btn.btn--dark:hover {
   background-color: #dedbdb;
@@ -1772,7 +1773,7 @@ img {
 }
 .about__img {
   position: absolute;
-  left: 20%;
+  left: 25%;
 }
 .about__img img {
   width: 90rem;
@@ -1835,7 +1836,7 @@ img {
 }
 .contact__img {
   position: absolute;
-  left: 20%;
+  left: 25%;
 }
 .contact__img img {
   width: 90rem;
@@ -1948,6 +1949,12 @@ img {
   background-color: #d9964a;
   color: #dedbdb;
 }
+.recipe__ingredient h3 {
+  margin-bottom: 2rem;
+}
+.recipe__ingredient h6 {
+  margin-bottom: 1.5rem;
+}
 
 .direction {
   margin-top: 20rem;
@@ -1972,4 +1979,44 @@ img {
 }
 .direction__title .divider::after {
   margin-left: 1rem;
+}
+.direction__steps p {
+  margin-bottom: 5rem;
+}
+.direction .next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.direction .video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.direction .video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.direction .yt__title h3 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.direction .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.direction .row h5 {
+  margin: 0;
+}
+.direction .row p {
+  margin: 0;
+}
+.direction .aboutRecipe__dish h3 {
+  color: #d9964a;
+  margin-top: 1rem;
 }/*# sourceMappingURL=main.min.css.map */
