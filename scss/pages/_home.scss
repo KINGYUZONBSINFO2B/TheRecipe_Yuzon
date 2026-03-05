@@ -1,35 +1,55 @@
 @use "../abstract" as *;
+
 .homeBanner {
   position: relative;
   padding: 4rem 0;
   background-color: $clr--tiertery;
+
   &__wrapper {
     @include gridCustom(1fr 1fr, 4rem);
+
+   
+    @include mediaQuery(520px) {
+      @include gridCustom(1fr, 2rem);
+      text-align: center;
+    }
   }
+
   &__details {
     padding-top: 5rem;
+    
+    @include mediaQuery(520px) {
+      padding-top: 2rem;
+    }
+
     small {
       letter-spacing: 1.5rem;
       margin-bottom: 5rem;
+      display: block; 
     }
-    h2 {
+
+    h2, p {
       line-height: 1.5;
       margin-bottom: 2rem;
     }
-    p {
-      line-height: 1.5;
-      margin-bottom: 2rem;
-    }   
-  }  
-   &__img img{
-      position: relative;
-      left: 10rem;
+  }
+
+  &__img img {
+    position: relative;
+    left: 10rem;
+
+    
+    @include mediaQuery(520px) {
+      left: 0;
+      width: 100%;
+      height: auto;
     }
-  
+  }
 }
 
 .weekly {
   padding: 4rem 0;
+
   &__title {
     padding-bottom: 3rem;
     .divider {
@@ -39,177 +59,169 @@
       text-align: center;
       color: $clr--primary;
 
-      &::before,
-      &::after {
+      &::before, &::after {
         content: "";
         flex: 1;
         border-bottom: 1px solid $clr--primary;
       }
-
-      &::before {
-        margin-right: 1rem;
-      }
-
-      &::after {
-        margin-left: 1rem;
-      }
+      &::before { margin-right: 1rem; }
+      &::after { margin-left: 1rem; }
     }
   }
 
   &__wrapper {
     @include gridCustom(1fr 1fr 1fr 1fr, 2rem);
+
+    @include mediaQuery(520px) {
+      @include gridCustom(1fr, 3rem); 
+    }
   }
+
   &__img img {
     @include imgFit(340px, 400px);
+    
+    @include mediaQuery(520px) {
+      width: 100%;  
+      height: auto;
+    }
   }
+
   &__details {
     padding-top: 1rem;
-    small {
-      letter-spacing: 1rem;
-    }
-    h4 {
-      padding-top: 1rem;
-    }
+    small { letter-spacing: 1rem; }
+    h4 { padding-top: 1rem; }
     p {
       text-align: justify;
       line-height: 1.5;
     }
   }
 }
+
 .collection {
   padding: 4rem 0;
-  &__title {
-    .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-      color: $clr--primary;
-      &::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px solid $clr--primary;
-      }
-      &::after {
-        margin-left: 1rem;
-      }
-    }
-  }
 
   &__section {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     margin-bottom: 2rem;
+
+    @include mediaQuery(520px) {
+      flex-direction: column !important; 
+      text-align: center;
+    }
   }
+
   img {
     @include imgFit(1700px, 500px);
+    
+    @include mediaQuery(520px) {
+      width: 100%;
+      height: 250px; 
+    }
   }
+
   &__section:nth-child(even) {
     flex-direction: row-reverse;
     gap: 5rem;
   }
+
   &__details {
     padding-top: 3rem;
-    small {
-      letter-spacing: 1rem;
-    }
-    h2 {
-      margin-bottom: 1rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
+    small { letter-spacing: 1rem; }
+    h2, p { margin-bottom: 1rem; }
   }
 }
+
 .newsLetter {
-  background-image:linear-gradient(rgba(255,255,255,0.3)), url("../../img/bell_pepper.jpeg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3)), url("../../img/bell_pepper.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  padding: 10rem;
+  padding: 10rem 2rem;  
   text-align: center;
-  &__wrapper{
-    h2{
-      color: $clr--light;
-    }
-    p{
-      color: $clr--light;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-    }
-     
-    form {
-  display: flex;
-  justify-content: center;
-  
-}
-input[type="text"] {
-  height: 3.1rem;
-  width: 30rem;
-  padding: 0 1rem;
-  border-radius: 10px 0 0 10px;
-   
-  border-right: none; 
-  outline: none;
-}
-form a {
-  display: flex;
-  align-items: center;
-  padding: 0 1.5rem;
-  border-radius: 0 10px 10px 0;
-   
-}
+
+  @include mediaQuery(520px) {
+    padding: 5rem 1rem;
   }
-}
-.classic{
-  padding: 4rem 0;
-  &__title {
-    .divider {
+
+  &__wrapper {
+    h2 { color: $clr--light; }
+    p {
+      color: $clr--light;
+      padding: 2rem 0;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+
+      @include mediaQuery(520px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    input[type="text"] {
+      height: 3.1rem;
+      width: 30rem;
+      padding: 0 1rem;
+      border-radius: 10px 0 0 10px;
+      border-right: none;
+      outline: none;
+
+      @include mediaQuery(520px) {
+        width: 100%;
+        max-width: 20rem;
+        border-radius: 10px;
+        border-right: 1px solid #ccc;
+      }
+    }
+
+    form a {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-      color: $clr--primary;
-      &::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px solid $clr--primary;
-      }
-      &::after {
-        margin-left: 1rem;
+      padding: 0 1.5rem;
+      border-radius: 0 10px 10px 0;
+
+      @include mediaQuery(520px) {
+        border-radius: 10px;
+        height: 3.1rem;
       }
     }
   }
-  i{
-    color: $clr--primary;
-  }
-  small{
-    letter-spacing: 0.75rem;
-    color: $clr--primary;
-  }
-  h4{
-    color: $clr--dark;
-  }
-  &__wrapper{
+}
+
+.classic {
+  padding: 4rem 0;
+  
+  &__wrapper {
     @include gridCustom(1fr 1fr 1fr, 2rem);
     max-width: 70rem;
     margin: 0 auto;
+
+    @include mediaQuery(520px) {
+      @include gridCustom(1fr, 2rem);
+      padding: 0 2rem;
+    }
   }
-  &__dish{
+
+  &__dish {
     @include gridCustom(1fr 1fr, 1rem);
     max-width: 200rem;
-    img{
+    
+    img {
       width: 10rem;
       height: 12rem;
     }
+
+    @include mediaQuery(520px) {
+      align-items: center;
+    }
   }
-  &__img{
-    width: 10rem;
-  }
-  &__details{
+
+  &__details {
     max-width: 100rem;
     width: 15rem;
   }
 }
-
