@@ -3,8 +3,16 @@
 .contact {
   background-color: $clr--tiertery;
   position: relative;
-  padding-bottom: 33rem;
+  padding-bottom: 23rem;
   margin-bottom: 20rem;
+  @include mediaQuery(520px) {
+    & {
+      position: static;
+    }
+  }
+  @include mediaQuery(520px) {
+    margin-bottom: 5rem;
+  }
 
   &__title h3 {
     text-align: center;
@@ -14,26 +22,38 @@
   &__img {
     position: absolute;
     left: 25%;
+    @include mediaQuery(520px) {
+      & {
+        left: 15%;
+      }
+    }
 
     img {
-      width: 90rem;
-      height: 50rem;
+      width: 60rem;
+      height: 40rem;
+      @include mediaQuery(520px) {
+        width: 24.5rem;
+        height: 30rem;
+      }
     }
   }
 }
 
 .contactForm {
   padding: 4rem 0;
-   
+
   &__wrapper {
     @include gridCustom(3fr 1fr, 2rem);
+    @include mediaQuery(520px) {
+      @include gridCustom(1fr, 2rem);
+    }
   }
   &__details {
-    h2{
-        margin-bottom: 2rem;
+    h2 {
+      margin-bottom: 2rem;
     }
-    p{
-        margin-bottom: 2rem;
+    p {
+      margin-bottom: 2rem;
     }
     form label,
     form input {
@@ -45,6 +65,9 @@
       width: 64rem;
       height: 4rem;
       font-size: 24px;
+      @include mediaQuery(520px) {
+        width: 20rem;
+      }
     }
     form textarea {
       border: 1px solid black;
@@ -52,6 +75,9 @@
       height: 20rem;
       margin-bottom: 1rem;
       font-size: 24px;
+      @include mediaQuery(520px) {
+        width: 20rem;
+      }
     }
   }
 
@@ -68,7 +94,7 @@
     p {
       color: $clr--light;
     }
-    h3{
+    h3 {
       padding-bottom: 1rem;
     }
     h4 {
